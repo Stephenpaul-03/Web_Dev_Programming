@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script\script.js"></script>
+    <title>Recommend-Trove</title>
+</head>
+<body>
+    <div class="home_Reccomend">
+        <header id="navbar">
+            <a href="Main.html" class="brand">TROVE</a>
+            <div>
+              <a href="Main.html">Home</a>
+              <a href="Recommend.html">Recommend</a>
+              <a href="about.html">About</a>
+            </div>
+        </header>       
+        <div class="Box">
+            <h2 class="h2">What type of book are you in the mood for?</h2>
+            &nbsp;<br>
+            <input type="text" id="genre-input" class="Input" placeholder="Enter Genre , Author Name or Relevant Information ">
+            &nbsp;<br>
+            <button id="search-button">Recommend Book</button>
+        </div>
+        <div class="tooltip">⪡<span class="tooltiptext">If you Keep seeing The same Results<br> It's the API and am working on changing it.<br>Thank you for understanding :D</span></div>
+    </div>
+    <section class="section">
+        <div class="row">
+            <ul id="results-list"></ul>
+
+
+            <script src="Script/API.js"></script>
+        </div>
+    </section>        
+</body>
+</html>

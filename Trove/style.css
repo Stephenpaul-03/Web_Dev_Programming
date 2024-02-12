@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --background:#ecedef;
+  --text_focus:#212322;
+  --text_unfocus:rgb(164, 162, 162);
+  --nav:#ecedef;
+  --accent:#3073a771;
+
+}
+/*Main CSS*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: var(--background);
+}
+
+section{
+  position: relative;
+}
+
+.section{
+  color: var(--background);
+  background: var(--background);
+  padding: 10px 100px;
+  transition: 0.3s ease;
+}
+
+/*Home CSS*/
+
+.home{
+  min-height: 100vh;
+  background-image: url(Images/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home:before{
+  z-index: 888;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(transparent, var(--background));
+}
+
+.home_Reccomend{
+  min-height: 100vh;
+  background-image: url(Images/Background-recommend.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home_Reccomend:before{
+  z-index: 888;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(transparent, var(--background));
+}
+
+.PanelHead{
+  color: var(--text_focus);
+  top:25.5vh;
+  left:3.5vw;
+  display: flex;
+  position: absolute;
+  font-size: 100px;
+  letter-spacing: 2px;
+}
+
+.CatchPhrase{
+  color: var(--text_unfocus);
+  top:50.5vh;
+  left:5vw;
+  display: flex;
+  position: absolute;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+/*Header*/
+
+header{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 0.6s ease;
+}
+  
+header .brand{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+header div {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: flex-end;
+	  align-items: center;
+	  margin-top: auto;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+header div a{
+    padding-right: 40px;
+}
+
+#navbar.scrolled {
+    background-color: var(--nav);
+    border-bottom: 2px solid rgb(0, 0, 0);   
+}
+
+
+/*Footer*/
+
+footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: var(--text_focus);
+  background-color: var(--background);
+  border-top: 1px solid var(--text_focus);
+  letter-spacing: 2px;
+}
+
+footer a {
+  color: var(--text_focus);
+  text-decoration: none; 
+}
+
+footer .left{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 22%;
+  left:2%;
+  text-align: center;
+}
+
+footer .right{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 22%;
+  right:2%;
+  text-align: center;
+}
+
+/*Link CSS*/
+
+a:link{
+	text-decoration: none;
+	color: var(--text_focus);
+	transition: 1s;
+	text-align: center;
+}
+a:visited{
+	text-decoration: none;
+	transition: 1s;
+	color: var(--text_focus);
+	text-align: center;
+}
+
+/*Box CSS*/
+
+.Box {
+  width: 60%;
+  height: 40%;
+  margin: auto;
+  position: absolute;
+  translate: 60% 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/*Section CSS*/
+
+.section .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin: 3rem 0;
+  color: var(--text_focus);
+}
+
+.section .row .image{
+  flex: 1 1 45rem;
+  display: flex;
+}
+.section .row .content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 45rem;
+}
+
+.section .row .image img{
+  width: 100%;
+  flex-basis: 50%;
+  padding-right: 20px
+}
+.section .row .info {
+  flex-basis: 50%;
+  padding-left: 20px;
+}
+
+
+/*Heading CSS*/
+
+.heading{
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text_focus);
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  letter-spacing: 2px;
+}
+
+.heading h1{
+  padding-bottom: 2rem;
+}
+
+
+.heading p{
+  max-width: 60rem;
+  margin: auto;
+  color: var(--Grayish-Blue);
+  font-size: 1.7rem;
+}
+
+/*Input CSS*/
+
+.Input {
+	background-color: var(--accent);
+	width: 375px;
+	height: 3em;
+	padding: 10px;
+  border: transparent;
+	border-radius: 5px;
+	color: var(--text_focus);
+	outline: none;
+	text-align: center;
+  }
+
+  .h2{
+    color: var(--text_focus);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+/*Book*/
+.Row_Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  color: var(--text_focus);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.Book-Info{
+  padding-left: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#results-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#results-list li {
+  flex-basis: 33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#results-list img{
+  width:128px;
+  height:200px;
+}
+
+/*Button CSS*/
+
+button {
+  width: 12em;
+  position: relative;
+  height: 3em;
+  border: transparent;
+  outline: none;
+  background-color: var(--accent);
+  color: var(--text_focus);
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+/*ToolTips*/
+
+.tooltip {
+  position: absolute;
+  top: 20%;
+  right:1%;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 450px;
+  background-color: transparent;
+  color: var(--text_focus);
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 125%;
+  transform: translateY(-50%);
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+}
+
+#id{
+  top:0%;
+  bottom: 0%;
+  position: absolute;
+}
+
+/*Img*/
+
+
+.Img_Container{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  position: absolute;
+  top: 6.38872%;
+  right: 3.875%;
+}
+
+.Img_Left{
+  
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*Text in about Page*/
+
+#hey{
+  position: absolute;
+  display: flex;
+  letter-spacing: 2px;
+  top:60%;
+  left:1.3751%;
+  font-size:80px;
+  color: #e03168;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+#there{
+  top:16.2136%;
+  left:3%;
+  font-size: 60px;  
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  position: absolute;
+  display: flex;
+  letter-spacing: 4px;
+}
+
+.TxT{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 16.65%;
+  left:10%;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 30px;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+.s1{
+  color: var(--text_focus) ;
+  font-size: 20px;
+}
+
+.s2{
+  color: #fb6420;
+  font-size: 50px;
+}
+
+.s3{
+  color:#373773;
+  font-size: 20px;
+}
+
+.s4{
+  color: var(--text_focus);
+  font-size: 30px;
+}
+
+
+
+/*Socail media Button*/
+
+.container{
+  display: flex;
+  position: absolute;
+  top: 72.75%;
+  right: 6.12%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: var(--text_focus);
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 30px;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: 1px dashed black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background: #ecedef;
+  border-radius: 90px;
+  transition: .5s ease-in-out;
+}
+
+.circle:hover {
+  cursor: pointer;
+  border:1px solid;
+}
+
+.circle#Instagram:hover{
+  background-color: #cc39a4;
+  box-shadow: 0 0 5px rgba(204, 57, 165, 0.5);
+}
+
+.circle#Github:hover{
+  background-color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.circle#LinkedIn:hover{
+  background-color: #0a66c2;
+  box-shadow: 0 0 5px rgba(10, 102, 194, 0.5);
+}
+
+
